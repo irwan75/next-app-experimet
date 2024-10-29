@@ -1,0 +1,58 @@
+export const listDataPlp = [
+    {
+        id: 1,
+        itemName: 'Nasi Goreng Spesial',
+        description: 'Nasi goreng lezat dengan campuran ayam, udang, telur, dan sayuran segar.',
+        price: 25000,
+        imageSource: 'https://asset.kompas.com/crops/_ELVZlKgQ8PNc0Desg-cXubC9k8=/0x1581:3915x4191/750x500/data/photo/2022/07/21/62d95ed36e228.jpg', 
+        qtyCart: 0,
+      },
+      {
+        id: 2,
+        itemName: 'Mie Ayam Bakso',
+        description: 'Mie kuning dengan ayam suwir, bakso, dan pangsit goreng renyah.',
+        price: 20000,
+        imageSource: 'https://asset.kompas.com/crops/QxxkyohLX0zoT9gAKf5gq7X3ExA=/0x0:1000x667/750x500/data/photo/2022/04/29/626b9789cdf4e.jpg',
+        qtyCart: 0,
+      },
+      {
+        id: 3,
+        itemName: 'Sate Ayam',
+        description: 'Sate ayam empuk dengan bumbu kacang yang gurih dan pedas.',
+        price: 30000,
+        imageSource: 'https://asset.kompas.com/crops/QgfVXuMhL5tHLqnJKfGPs9Yx5xY=/100x67:900x600/750x500/data/photo/2023/10/24/6537126d64f8b.jpeg',
+        qtyCart: 0,
+      },
+      {
+        id: 4,
+        itemName: 'Ayam Bakar Sambal Matah',
+        description: 'Ayam bakar dengan sambal matah khas Bali yang pedas dan segar.',
+        price: 35000,
+        imageSource: 'https://asset-2.tstatic.net/jabar/foto/bank/images/ayam-bakar-sambal-matah_20150618_163717.jpg',
+        qtyCart: 0,
+      },
+      {
+        id: 5,
+        itemName: 'Burger Keju',
+        description: 'Burger dengan daging sapi, keju leleh, dan sayuran segar.',
+        price: 28000,
+        imageSource: 'https://img-global.cpcdn.com/recipes/496a8c2fd28a4b29/400x400cq70/photo.jpg',
+        qtyCart: 0,
+      },
+      {
+        id: 6,
+        itemName: "Es Teh Manis",
+        description: "Es teh segar dengan rasa manis yang pas.",
+        price: 5000,
+        imageSource: 'https://nilaigizi.com/assets/images/produk/produk_1578041377.jpg',
+        qtyCart: 0,
+      },
+      {
+        id: 7,
+        itemName: "Kopi Susu",
+        description: "Kopi hitam dengan susu segar, cocok untuk pagi dan sore.",
+        price: 15000,
+        imageSource: 'https://img-global.cpcdn.com/recipes/a99adb15ec4294c4/400x400cq70/photo.jpg',
+        qtyCart: 0,
+      }
+]
