@@ -1,10 +1,8 @@
 'use client';
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import CardItem from '@/components/card/card-item';
-import FloatingBox from '@/components/floating/floating-box';
+import DefaultButton from '@/components/button/default-button';
 import { listDataPlp } from '@/data/dummy-data';
+import { useState } from "react";
 
 export default function Home() {
 
@@ -12,7 +10,7 @@ export default function Home() {
   let [totalPrice, setTotalPrice] = useState(0);
   const [dataList, setDataList] = useState(listDataPlp);
 
-  const handleCounterAdd = (id:number) => {
+  const handleCounterAdd = (id: number) => {
     const item = dataList.find((item) => item.id === id);
     if (item) {
       item.qtyCart += 1;
@@ -22,7 +20,7 @@ export default function Home() {
     recalculateTotal();
   }
 
-  const handleCounterMinus = (id:number) => {
+  const handleCounterMinus = (id: number) => {
     const item = dataList.find((item) => item.id === id);
     if (item) {
       item.qtyCart -= 1;
@@ -45,11 +43,26 @@ export default function Home() {
 
   const onTapCheckout = () => {
     console.log('checkout');
+    const dataCallback = {
+      status: "success",
+      message: "Webview berhasil di tutup oleh user",
+      userId: 12345,
+    }
+
+    if (typeof window !== 'undefined' && window.flutter_inappwebview) {
+      window.flutter_inappwebview.callHandler('closeWebViewHandler', dataCallback);
+    }
   }
 
   return (
-    <div className="mx-4">
-      {dataList.map((item) => (
+    <div className="bg-white h-screen w-screen overflow-y-auto content-center p-10">
+      <span className="text-black">Click button below to trigger exit page</span>
+      <DefaultButton
+        textButton="Checkout"
+        sizeButton="text-lg"
+        handleClick={onTapCheckout}
+      />
+      {/* {dataList.map((item) => (
           <CardItem
           key={item.id} 
           itemName={item.itemName} 
@@ -67,7 +80,7 @@ export default function Home() {
           totalPrice={totalPrice} 
           totalItem={totalItem} />
         </div>
-      )}
+      )} */}
     </div>
   );
 }

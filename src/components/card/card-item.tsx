@@ -26,11 +26,11 @@ export default function CardItem({itemName, price, description, imageSource, cou
                         <DefaultButton textButton="Tambah" handleClick={handleCounterAdd} />
                     ) : (
                         <>
-                        <IconButton textButton="+" colorText='text-red-600' colorBorder='border-red-600'  handleClick={handleCounterAdd} />
+                        <IconButton textButton="+" colorText='text-green-600' colorBorder='border-green-600'  handleClick={handleCounterAdd} />
                         <div className='mr-2'></div>
                         <div className='border pl-4 pr-4 rounded-md pt-0.5 pb-0.5'>{counter}</div>
                         <div className='ml-2'></div>
-                        <IconButton textButton="-" colorText='text-green-600' colorBorder='border-green-600' handleClick={handleCounterMinus} />
+                        <IconButton textButton="-" colorText='text-red-600' colorBorder='border-red-600' handleClick={handleCounterMinus} />
                         </>
                     ) }
                 </div>
