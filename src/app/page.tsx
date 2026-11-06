@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Home() {
 
   const [totalItem, setTotalItem] = useState(0);
-  let [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [dataList, setDataList] = useState(listDataPlp);
 
   const handleCounterAdd = (id: number) => {
