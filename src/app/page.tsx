@@ -48,9 +48,12 @@ export default function Home() {
       message: "Webview berhasil di tutup oleh user",
       userId: 12345,
     }
+    const flutterBridge = window.flutter_inappwebview;
 
-    if (typeof window !== 'undefined' && window.flutter_inappwebview) {
-      window.flutter_inappwebview.callHandler('closeWebViewHandler', dataCallback);
+    // if (typeof window !== 'undefined' && window.flutter_inappwebview) {
+    if (typeof flutterBridge?.callHandler === 'function') {
+      // window.flutter_inappwebview.callHandler('closeWebViewHandler', dataCallback);
+      flutterBridge.callHandler('closeWebViewHandler', "/home");
     }
   }
 
